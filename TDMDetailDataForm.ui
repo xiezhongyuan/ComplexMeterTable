@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TDMDetailDataForm</class>
+ <widget class="QWidget" name="TDMDetailDataForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1039</width>
+    <height>269</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string notr="true">QFrame#frame
+{
+	background-color:rgba(246, 248, 251, 1);
+}
+
+QFrame#spacer1, QFrame#spacer2, QFrame#spacer3, QFrame#spacer4, QFrame#spacer5
+{
+	background-color: qlineargradient(spread:reflect, x1:1, y1:0.5, x2:1, y2:0, stop:0 rgba(220, 220, 220, 255), stop:1 rgba(246, 248, 251, 1));
+}
+
+QLabel#titleLabel1, QLabel#titleLabel2, QLabel#titleLabel3, QLabel#titleLabel4, QLabel#titleLabel5, QLabel#titleLabel6
+{
+	color:#333333;
+	
+	font-family:&quot;Microsoft Yahei&quot;;
+	font-size:16px;
+	font-weight:bold;
+
+	border-top:none;
+	border-bottom:none;
+
+	border-right:none;
+	
+	background-image: url(:/images/vSpacer.png);
+	background-repeat:none;
+	background-position:left;
+	
+
+
+
+	margin-left:20px;
+	padding-left:10px;
+
+	min-height:16px;
+	max-height:16px;
+
+
+}
+
+QLabel#continueRateLabel, /*续保率*/
+QLabel#returnRateLabel,/*退费率*/
+QLabel#timeoutConnectLabel,/*超时联系*/
+QLabel#crmBandRateLabel,/*微信CRM绑定率*/
+QLabel#correctRateLabel,/*订正率*/
+QLabel#homeworkSubmitRateLabel,/*作业提交率*/
+QLabel#markingOvertimeLabel,/*超时批改量*/
+QLabel#correctResponseTimeLabel,/*批改响应时长*/
+QLabel#correctTimeLabel,/*批改时长*/
+QLabel#attendanceRateLabel,/*学生出勤率*/
+QLabel#broadcastLateTimesLabel,/*直播迟到次数*/
+QLabel#taskQcScoreLabel,/*作业质检得分*/
+QLabel#taskCorrectErrorLabel,/*作业批错数量*/
+QLabel#questionQcScoreLabel,/*答疑质检得分*/
+QLabel#questionCorrectErrorLabel
+{
+	color:#333333;
+	font-family:&quot;Microsoft Yahei&quot;;
+	font-size:14px;
+	font-weight:bold;
+}
+
+QLabel#continueRateValueLabel,/*续保率*/
+QLabel#returnRateValueLabel,/*退费率*/
+QLabel#timeoutConnectValueLabel,/*超时联系*/
+QLabel#crmBandRateValueLabel,/*微信CRM绑定率*/
+QLabel#correctRateValueLabel,/*订正率*/
+QLabel#homeworkSubmitRateValueLabel,/*作业提交率*/
+QLabel#markingOvertimeValueLabel,/*超时批改量*/
+QLabel#correctResponseTimeValueLabel,/*批改响应时长*/
+QLabel#correctTimeValueLabel,/*批改时长*/
+QLabel#attendanceRateValueLabel,/*学生出勤率*/
+QLabel#broadcastLateTimesValueLabel,/*直播迟到次数*/
+QLabel#taskQcScoreValueLabel,/*作业质检得分*/
+QLabel#taskCorrectErrorValueLabel,/*作业批错数量*/
+QLabel#questionQcScoreValueLabel,/*答疑质检得分*/
+QLabel#questionCorrectErrorValueLabel
+{
+	color:#333333;
+	font-family:&quot;Microsoft Yahei&quot;;
+	font-size:14px;
+}
+
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMaximumSize</enum>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="dutyFinishedWgt" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>180</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>180</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>20</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="titleLabel1">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>续报</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="PieForm" name="widget" native="true"/>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="spacer1">
+        <property name="minimumSize">
+         <size>
+          <width>2</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>2</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="resubmitWgt" native="true">
+        <property name="styleSheet">
+         <string notr="true">backround:transparent;</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="spacing">
+          <number>20</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>20</number>
+         </property>
+         <property name="rightMargin">
+          <number>9</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="titleLabel2">
+           <property name="text">
+            <string>续报</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="continueRateLabel">
+             <property name="text">
+              <string>续报率</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="continueRateValueLabel">
+             <property name="text">
+              <string>85%</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="returnRateLabel">
+             <property name="text">
+              <string>退费率</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="returnRateValueLabel">
+             <property name="text">
+              <string>80%</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>124</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="spacer2">
+        <property name="minimumSize">
+         <size>
+          <width>2</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>2</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="communicateWgt" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <property name="spacing">
+          <number>20</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>20</number>
+         </property>
+         <property name="rightMargin">
+          <number>9</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="titleLabel3">
+           <property name="text">
+            <string>沟通</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="timeoutConnectLabel">
+             <property name="text">
+              <string>超时联系</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="timeoutConnectValueLabel">
+             <property name="text">
+              <string>20（10%）</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="crmBandRateLabel">
+             <property name="text">
+              <string>微信CRM绑定率</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="crmBandRateValueLabel">
+             <property name="text">
+              <string>85%</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>124</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+        <zorder>titleLabel3</zorder>
+        <zorder>verticalSpacer_2</zorder>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="spacer3">
+        <property name="minimumSize">
+         <size>
+          <width>2</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>2</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="homeworkWgt" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <property name="spacing">
+          <number>20</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>20</number>
+         </property>
+         <property name="rightMargin">
+          <number>9</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="titleLabel4">
+           <property name="text">
+            <string>作业批改</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="correctRateLabel">
+             <property name="text">
+              <string>订正率</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="correctRateValueLabel">
+             <property name="text">
+              <string>20（10%）</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="homeworkSubmitRateLabel">
+             <property name="text">
+              <string>作业提交率</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="homeworkSubmitRateValueLabel">
+             <property name="text">
+              <string>85%</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="markingOvertimeLabel">
+             <property name="text">
+              <string>超时批改量</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="markingOvertimeValueLabel">
+             <property name="text">
+              <string>85</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_10">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="correctResponseTimeLabel">
+             <property name="text">
+              <string>批改响应时长</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="correctResponseTimeValueLabel">
+             <property name="text">
+              <string>85min</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_11">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="correctTimeLabel">
+             <property name="text">
+              <string>批改时长</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="correctTimeValueLabel">
+             <property name="text">
+              <string>120s</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="spacer4">
+        <property name="minimumSize">
+         <size>
+          <width>2</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>2</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="broadcastWgt" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="spacing">
+          <number>20</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>20</number>
+         </property>
+         <property name="rightMargin">
+          <number>9</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="titleLabel5">
+           <property name="text">
+            <string>直播</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_8">
+           <layout class="QHBoxLayout" name="horizontalLayout_12">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <property name="leftMargin">
+             <number>34</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="attendanceRateLabel">
+              <property name="text">
+               <string>学生出勤率</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="attendanceRateValueLabel">
+              <property name="text">
+               <string>85%</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="broadcastLateTimesLabel">
+             <property name="text">
+              <string>直播迟到次数</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="broadcastLateTimesValueLabel">
+             <property name="text">
+              <string>5</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>124</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="spacer5">
+        <property name="minimumSize">
+         <size>
+          <width>2</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>2</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="qcWgt" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <property name="spacing">
+          <number>20</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>20</number>
+         </property>
+         <property name="rightMargin">
+          <number>9</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="titleLabel6">
+           <property name="text">
+            <string>质检</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_16">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="taskQcScoreLabel">
+             <property name="text">
+              <string>作业质检得分</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="taskQcScoreValueLabel">
+             <property name="text">
+              <string>2.0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_17">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="taskCorrectErrorLabel">
+             <property name="text">
+              <string>作业批错数量</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="taskCorrectErrorValueLabel">
+             <property name="text">
+              <string>8</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_14">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="questionQcScoreLabel">
+             <property name="text">
+              <string>答疑质检得分</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="questionQcScoreValueLabel">
+             <property name="text">
+              <string>3.5</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_15">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="questionCorrectErrorLabel">
+             <property name="text">
+              <string>答疑错误量</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="questionCorrectErrorValueLabel">
+             <property name="text">
+              <string>5</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+     <zorder>dutyFinishedWgt</zorder>
+     <zorder>resubmitWgt</zorder>
+     <zorder>communicateWgt</zorder>
+     <zorder>homeworkWgt</zorder>
+     <zorder>broadcastWgt</zorder>
+     <zorder>qcWgt</zorder>
+     <zorder>spacer1</zorder>
+     <zorder>spacer2</zorder>
+     <zorder>spacer3</zorder>
+     <zorder>spacer4</zorder>
+     <zorder>spacer5</zorder>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PieForm</class>
+   <extends>QWidget</extends>
+   <header>PieForm.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
